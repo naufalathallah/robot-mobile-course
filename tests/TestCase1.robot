@@ -21,10 +21,19 @@ Log My Specific Username
     [Arguments]    ${USERNAME}
     Log    ${USERNAME}
 
+Log My Specific Password
+    [Arguments]    ${PASSWORD}
+    Log    ${PASSWORD}
+
 Log My Specific Username And Password
     [Arguments]    ${USERNAME}    ${PASSWORD}
     Log    ${USERNAME}
     Log    ${PASSWORD}
+
+Log My Username And Password Specific
+    [Arguments]    ${USERNAME}    ${PASSWORD}
+    Log My Specific Username    USERNAME=${USERNAME}
+    Log My Specific Password    PASSWORD=${PASSWORD}
 
 *** Variables ***
 ${MY-VARIABLE}    my test variable
@@ -52,4 +61,5 @@ TEST
     Log My Specific Username    USERNAME=${DICTIONARY2}[username]
     Log My Specific Username And Password    USERNAME=${DICTIONARY}[username]    PASSWORD=${DICTIONARY}[password] 
     Log My Specific Username And Password    USERNAME=${DICTIONARY2}[username]    PASSWORD=${DICTIONARY2}[password] 
+    Log My Username And Password Specific    ${DICTIONARY}[username]    ${DICTIONARY}[password] 
 
