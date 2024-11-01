@@ -2,6 +2,7 @@
 Library    OperatingSystem
 
 *** Test Cases ***
-TEST2
+TEST3
     [Tags]    demo2
-    Log    message="second tc"
+    Log    message="TC Ke 3"
+    Logs    message="TC Ke 3"

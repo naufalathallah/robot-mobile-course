@@ -8,5 +8,6 @@ Library             OperatingSystem
 
 *** Test Cases ***
 TEST
+    [Tags]    demo
     Log    message="test"
 
