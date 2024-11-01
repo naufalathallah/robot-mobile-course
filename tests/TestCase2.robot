@@ -1,7 +1,8 @@
 *** Settings ***
-Library    OperatingSystem
+Documentation       This is my second test case
+Resource    ../resources/resources.robot
 
 *** Test Cases ***
-TEST2
-    [Tags]    demo2
-    Log    message="second tc"
+TEST
+    [Tags]    demo2    resources
+    Log My Specific Username And Password   ${DICTIONARY}[username]    ${DICTIONARY}[password] 
